@@ -10,9 +10,7 @@ export default function Login({ history }) {
     async function handleSubmit(e){
         e.preventDefault()
         const response = await api.post('/devs', { username })
-
         const { _id } = response.data
-
         history.push(`/dev/${_id}`)
     }
 
